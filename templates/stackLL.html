@@ -1,0 +1,337 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="glowscript" class="glowscript">
+    <link type="text/css" href="https://www.glowscript.org/css/redmond/2.1/jquery-ui.custom.css" rel="stylesheet" />
+    <link type="text/css" href="https://www.glowscript.org/css/ide.css" rel="stylesheet" />
+    <link type="text/css" href="/static/css/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://www.glowscript.org/lib/jquery/2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.glowscript.org/lib/jquery/2.1/jquery-ui.custom.min.js"></script>
+    <script type="text/javascript" src="https://www.glowscript.org/package/glow.3.1.min.js"></script>
+    <script type="text/javascript" src="https://www.glowscript.org/package/RSrun.3.1.min.js"></script>
+    <script type="text/javascript">
+    
+    // START JAVASCRIPT
+    (function() {;
+    async function __main__() {
+    "use strict";
+    
+        var version, display, vector, print, arange, __name__, type, scene, ρσ_ls;
+        version = ρσ_list_decorate([ "3.1", "glowscript" ]);
+        Array.prototype['+'] = function(r) {return this.concat(r)}
+        Array.prototype['*'] = function(r) {return __array_times_number(this, r)}
+        window.__GSlang = "vpython";
+        display = canvas;
+        vector = vec;
+        print = GSprint;
+        arange = range;
+        __name__ = "__main__";
+        type = pytype;
+        scene = canvas();
+        fontloading();
+        await waitforfonts();
+        "3";
+        function Node() {;
+        }
+        Node.prototype.__init__ = async function __init__() {
+            var self = this;
+            var data = ( 0 === arguments.length["-"](1) && arguments[arguments.length["-"](1)] !== null && typeof arguments[arguments.length["-"](1)] === "object" && arguments[arguments.length["-"](1)] [ρσ_kwargs_symbol] === true) ? undefined : arguments[0];
+            var next = (arguments[1] === undefined || ( 1 === arguments.length["-"](1) && arguments[arguments.length["-"](1)] !== null && typeof arguments[arguments.length["-"](1)] === "object" && arguments[arguments.length["-"](1)] [ρσ_kwargs_symbol] === true)) ? __init__.__defaults__.next : arguments[1];
+            var ρσ_kwargs_obj = arguments[arguments.length["-"](1)];
+            if (ρσ_kwargs_obj === null || typeof ρσ_kwargs_obj !== "object" || ρσ_kwargs_obj [ρσ_kwargs_symbol] !== true) ρσ_kwargs_obj = {};
+            if (Object.prototype.hasOwnProperty.call(ρσ_kwargs_obj, "next")){
+                next = ρσ_kwargs_obj.next;
+            }
+            "5";
+            self.data = data;
+            "6";
+            self.next = next;
+        };
+        if (!Node.prototype.__init__.__defaults__) Object.defineProperties(Node.prototype.__init__, {
+            __defaults__ : {value: {next:null}},
+            __handles_kwarg_interpolation__ : {value: true},
+            __argnames__ : {value: ["data", "next"]},
+            __module__ : {value: "__main__"}
+        });
+        Node.__argnames__ = Node.prototype.__init__.__argnames__;
+        Node.__handles_kwarg_interpolation__ = Node.prototype.__init__.__handles_kwarg_interpolation__;
+        Node.prototype.__repr__ = async function __repr__() {
+                    return "<"["+"](__name__)["+"](".")["+"](this.constructor.name)["+"](" #")["+"](this.ρσ_object_id)["+"](">");
+        };
+        Node.prototype.__str__ = async function __str__() {
+            return (await this.__repr__());
+        };
+        Object.defineProperty(Node.prototype, "__bases__", {value: []});
+        
+    
+        "8";
+        function StackLL() {;
+        }
+        StackLL.prototype.__init__ = async function __init__() {
+            var self = this;
+            var top = (arguments[0] === undefined || ( 0 === arguments.length["-"](1) && arguments[arguments.length["-"](1)] !== null && typeof arguments[arguments.length["-"](1)] === "object" && arguments[arguments.length["-"](1)] [ρσ_kwargs_symbol] === true)) ? __init__.__defaults__.top : arguments[0];
+            var ρσ_kwargs_obj = arguments[arguments.length["-"](1)];
+            if (ρσ_kwargs_obj === null || typeof ρσ_kwargs_obj !== "object" || ρσ_kwargs_obj [ρσ_kwargs_symbol] !== true) ρσ_kwargs_obj = {};
+            if (Object.prototype.hasOwnProperty.call(ρσ_kwargs_obj, "top")){
+                top = ρσ_kwargs_obj.top;
+            }
+            "10";
+            self.top = top;
+            "11";
+            self.len = 0;
+        };
+        if (!StackLL.prototype.__init__.__defaults__) Object.defineProperties(StackLL.prototype.__init__, {
+            __defaults__ : {value: {top:null}},
+            __handles_kwarg_interpolation__ : {value: true},
+            __argnames__ : {value: ["top"]},
+            __module__ : {value: "__main__"}
+        });
+        StackLL.__argnames__ = StackLL.prototype.__init__.__argnames__;
+        StackLL.__handles_kwarg_interpolation__ = StackLL.prototype.__init__.__handles_kwarg_interpolation__;
+        StackLL.prototype.pop = async function pop() {
+            var self = this;
+            var ρσ_ls, data;
+            "14";
+            if (self.top === null) {
+                "15";
+                return null;
+            }
+            "16";
+            data = self.top.data;
+            "17";
+            self.top = self.top.next;
+            "18";
+            self.len=self.len["-"](1);
+            "19";
+            return data;
+        };
+        if (!StackLL.prototype.pop.__module__) Object.defineProperties(StackLL.prototype.pop, {
+            __module__ : {value: "__main__"}
+        });
+        StackLL.prototype.push = async function push(data) {
+            var self = this;
+            var ρσ_ls, _GS_1;
+            "22";
+            _GS_1 = new Node;
+            (await _GS_1.__init__(data, self.top));
+            self.top = _GS_1;
+            "23";
+            self.len=self.len["+"](1);
+        };
+        if (!StackLL.prototype.push.__argnames__) Object.defineProperties(StackLL.prototype.push, {
+            __argnames__ : {value: ["data"]},
+            __module__ : {value: "__main__"}
+        });
+        StackLL.prototype.peek = async function peek() {
+            var self = this;
+            "26";
+            return (self.top !== null) ? self.top.data : null;
+        };
+        if (!StackLL.prototype.peek.__module__) Object.defineProperties(StackLL.prototype.peek, {
+            __module__ : {value: "__main__"}
+        });
+        StackLL.prototype.isEmpty = async function isEmpty() {
+            var self = this;
+            "29";
+            return (await self.peek()) === null;
+        };
+        if (!StackLL.prototype.isEmpty.__module__) Object.defineProperties(StackLL.prototype.isEmpty, {
+            __module__ : {value: "__main__"}
+        });
+        StackLL.prototype.size = async function size() {
+            var self = this;
+            "32";
+            return self.len;
+        };
+        if (!StackLL.prototype.size.__module__) Object.defineProperties(StackLL.prototype.size, {
+            __module__ : {value: "__main__"}
+        });
+        StackLL.prototype.__repr__ = async function __repr__() {
+                    return "<"["+"](__name__)["+"](".")["+"](this.constructor.name)["+"](" #")["+"](this.ρσ_object_id)["+"](">");
+        };
+        StackLL.prototype.__str__ = async function __str__() {
+            return (await this.__repr__());
+        };
+        Object.defineProperty(StackLL.prototype, "__bases__", {value: []});
+        
+        
+        
+        
+        
+        
+    
+        "34";
+        async function stackll() {
+            var ρσ_ls, c, scene, _GS_1, stack, t, ttxt;
+            "35";
+            c = ρσ_list_decorate([]);
+            "37";
+            async function stNode(n) {
+                var ρσ_ls, a, b, t, c;
+                "38";
+                a = ρσ_interpolate_kwargs.call(this, arrow, [ρσ_desugar_kwargs({pos: vector(15["-u"](), 0, 0), axis: vector(10, 0, 0), color: color.yellow, shaftwidth: 1})]);
+                "39";
+                b = ρσ_interpolate_kwargs.call(this, box, [ρσ_desugar_kwargs({pos: vector(0, 0, 0), axis: vec(90, 0, 0), length: 10, height: 10, width: 10, color: color.blue})]);
+                "40";
+                t = ρσ_interpolate_kwargs.call(this, text, [ρσ_desugar_kwargs({text: str(n), align: "center", color: color.green, pos: vec(0, 2.2["-u"](), 5), height: 4})]);
+                "41";
+                c = ρσ_interpolate_kwargs.call(this, compound, [ρσ_list_decorate([ a, b, t ])].concat([ρσ_desugar_kwargs({origin: vec(0, 0, 0), pos: vec(15, 0, 0), axis: vec(90, 0, 0)})]));
+                "42";
+                return c;
+            };
+            if (!stNode.__argnames__) Object.defineProperties(stNode, {
+                __argnames__ : {value: ["n"]},
+                __module__ : {value: "__main__"}
+            });
+    
+            "44";
+            async function stMove(n) {
+                var ρσ_ls, i, j;
+                "45";
+                for (var ρσ_Index0 = 0; ρσ_Index0["<"](10); ρσ_Index0++) {
+                    j = ρσ_Index0;
+                    "46";
+                    (await rate(50));
+                    "47";
+                    var ρσ_Iter1 = c;
+                    ρσ_Iter1 = ((typeof ρσ_Iter1[Symbol.iterator] === "function") ? (ρσ_Iter1 instanceof Map ? ρσ_Iter1.keys() : ρσ_Iter1) : Object.keys(ρσ_Iter1));
+                    for (var ρσ_Index1 of ρσ_Iter1) {
+                        i = ρσ_Index1;
+                        "48";
+                        i.pos.x=i.pos.x["+"](2["*"](n));
+                    }
+                }
+            };
+            if (!stMove.__argnames__) Object.defineProperties(stMove, {
+                __argnames__ : {value: ["n"]},
+                __module__ : {value: "__main__"}
+            });
+    
+            "50";
+            scene = canvas();
+            "51";
+            _GS_1 = new StackLL;
+            (await _GS_1.__init__());
+            stack = _GS_1;
+            "52";
+            scene.range = 30;
+            "53";
+            t = ρσ_interpolate_kwargs.call(this, box, [ρσ_desugar_kwargs({pos: vector(5["-u"](), 0, 0), axis: vec(90, 0, 0), length: 10, height: 10, width: 10, color: color.purple})]);
+            "54";
+            ttxt = ρσ_interpolate_kwargs.call(this, text, [ρσ_desugar_kwargs({text: "Top", align: "center", color: color.red, pos: vec(5["-u"](), 1.3["-u"](), 5), height: 3})]);
+            "55";
+            scene.center = vec(t.pos.x["+"](25), 0, 8);
+            "57";
+            scene.append_to_caption("\t\t\t\t\t");
+            "58";
+            async function B(b) {
+                var ρσ_ls, n;
+                (await sleep(.1));
+                "59";
+                n = int(input("Enter a number:"));
+                "60";
+                (await stack.push(n));
+                "61";
+                (await stMove(1));
+                "62";
+                print("Element "["+"](n)["+"](" pushed"));
+                "63";
+                c.append((await stNode(n)));
+            };
+            if (!B.__argnames__) Object.defineProperties(B, {
+                __argnames__ : {value: ["b"]},
+                __module__ : {value: "__main__"}
+            });
+    
+            "64";
+            ρσ_interpolate_kwargs.call(this, button, [ρσ_desugar_kwargs({bind: B, text: "push"})]);
+            "65";
+            scene.append_to_caption(" ");
+            "67";
+            async function A(b) {
+                var ρσ_ls, e, d;
+                "68";
+                e = (await stack.pop());
+                "69";
+                if ((e !== null && (typeof e !== "object" || ρσ_not_equals(e, null)))) {
+                    "70";
+                    print("Element "["+"](e)["+"](" popped"));
+                    "71";
+                    d = c.pypop(1["-u"]());
+                    "72";
+                    d.visible = false;
+                    "73";
+                    d = undefined;
+                    "74";
+                    (await stMove(1["-u"]()));
+                    "75";
+                } else {
+                    "76";
+                    print("No element available");
+                }
+            };
+            if (!A.__argnames__) Object.defineProperties(A, {
+                __argnames__ : {value: ["b"]},
+                __module__ : {value: "__main__"}
+            });
+    
+            "77";
+            ρσ_interpolate_kwargs.call(this, button, [ρσ_desugar_kwargs({bind: A, text: "pop"})]);
+            "78";
+            scene.append_to_caption(" ");
+            "80";
+            async function T(b) {
+                "81";
+                print("Top element:", (await stack.peek()));
+            };
+            if (!T.__argnames__) Object.defineProperties(T, {
+                __argnames__ : {value: ["b"]},
+                __module__ : {value: "__main__"}
+            });
+    
+            "82";
+            ρσ_interpolate_kwargs.call(this, button, [ρσ_desugar_kwargs({bind: T, text: "Top"})]);
+            "83";
+            scene.append_to_caption(" ");
+            "85";
+            async function S(b) {
+                "86";
+                print("Stack size:", (await stack.size()));
+            };
+            if (!S.__argnames__) Object.defineProperties(S, {
+                __argnames__ : {value: ["b"]},
+                __module__ : {value: "__main__"}
+            });
+    
+            "87";
+            ρσ_interpolate_kwargs.call(this, button, [ρσ_desugar_kwargs({bind: S, text: "Size"})]);
+            "88";
+            scene.append_to_caption(" ");
+            "90";
+            scene.append_to_caption("\n\n");
+            "91";
+            scene.append_to_caption("Activities:");
+            "92";
+            print();
+            "94";
+        };
+        if (!stackll.__module__) Object.defineProperties(stackll, {
+            __module__ : {value: "__main__"}
+        });
+    
+        if ((__name__ === "__main__" || typeof __name__ === "object" && ρσ_equals(__name__, "__main__"))) {
+            "95";
+            (await stackll());
+        }
+    };
+    if (!__main__.__module__) Object.defineProperties(__main__, {
+        __module__ : {value: "__main__"}
+    });
+    
+    ;$(function(){ window.__context = { glowscript_container: $("#glowscript").removeAttr("id") }; __main__() })})()
+    // END JAVASCRIPT
+    
+    //--><!]]></script>
+<script text=""></script>
+    <a class="btn btn-sm btn-dark mb-1" href="/"><span>Back</span></a>
+</div>
+{% endblock %}

@@ -1,0 +1,351 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="glowscript" class="glowscript">
+    <link type="text/css" href="https://www.glowscript.org/css/redmond/2.1/jquery-ui.custom.css" rel="stylesheet" />
+    <link type="text/css" href="https://www.glowscript.org/css/ide.css" rel="stylesheet" />
+    <link type="text/css" href="/static/css/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://www.glowscript.org/lib/jquery/2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.glowscript.org/lib/jquery/2.1/jquery-ui.custom.min.js"></script>
+    <script type="text/javascript" src="https://www.glowscript.org/package/glow.3.1.min.js"></script>
+    <script type="text/javascript" src="https://www.glowscript.org/package/RSrun.3.1.min.js"></script>
+    <script type="text/javascript">
+    // START JAVASCRIPT
+    (function() {;
+    async function __main__() {
+    "use strict";
+    
+        var version, display, vector, print, arange, __name__, type, scene, ρσ_ls;
+        version = ρσ_list_decorate([ "3.1", "glowscript" ]);
+        Array.prototype['+'] = function(r) {return this.concat(r)}
+        Array.prototype['*'] = function(r) {return __array_times_number(this, r)}
+        window.__GSlang = "vpython";
+        display = canvas;
+        vector = vec;
+        print = GSprint;
+        arange = range;
+        __name__ = "__main__";
+        type = pytype;
+        scene = canvas();
+        fontloading();
+        await waitforfonts();
+        "3";
+        function QueueArr() {;
+        }
+        QueueArr.prototype.__init__ = async function __init__() {
+            var self = this;
+            "5";
+            self.items = ρσ_list_decorate([]);
+        };
+        if (!QueueArr.prototype.__init__.__module__) Object.defineProperties(QueueArr.prototype.__init__, {
+            __module__ : {value: "__main__"}
+        });
+        QueueArr.__argnames__ = QueueArr.prototype.__init__.__argnames__;
+        QueueArr.__handles_kwarg_interpolation__ = QueueArr.prototype.__init__.__handles_kwarg_interpolation__;
+        QueueArr.prototype.isEmpty = async function isEmpty() {
+            var self = this;
+            "8";
+            return ρσ_equals(self.items, ρσ_list_decorate([]));
+        };
+        if (!QueueArr.prototype.isEmpty.__module__) Object.defineProperties(QueueArr.prototype.isEmpty, {
+            __module__ : {value: "__main__"}
+        });
+        QueueArr.prototype.enqueue = async function enqueue(data) {
+            var self = this;
+            "11";
+            self.items.append(data);
+        };
+        if (!QueueArr.prototype.enqueue.__argnames__) Object.defineProperties(QueueArr.prototype.enqueue, {
+            __argnames__ : {value: ["data"]},
+            __module__ : {value: "__main__"}
+        });
+        QueueArr.prototype.dequeue = async function dequeue() {
+            var self = this;
+            "14";
+            if ((await self.isEmpty())) {
+                "15";
+                return null;
+            }
+            "16";
+            return self.items.pypop(0);
+        };
+        if (!QueueArr.prototype.dequeue.__module__) Object.defineProperties(QueueArr.prototype.dequeue, {
+            __module__ : {value: "__main__"}
+        });
+        QueueArr.prototype.front = async function front() {
+            var self = this;
+            "19";
+            if (ρσ_equals(self.items, ρσ_list_decorate([]))) {
+                "20";
+                return null;
+                "21";
+            } else {
+                "22";
+                return self.items[0];
+            }
+        };
+        if (!QueueArr.prototype.front.__module__) Object.defineProperties(QueueArr.prototype.front, {
+            __module__ : {value: "__main__"}
+        });
+        QueueArr.prototype.rear = async function rear() {
+            var self = this;
+            "25";
+            if (ρσ_equals(self.items, ρσ_list_decorate([]))) {
+                "26";
+                return null;
+                "27";
+            } else {
+                "28";
+                return (ρσ_expr_temp = self.items)[ρσ_expr_temp.length["-"](1)];
+            }
+        };
+        if (!QueueArr.prototype.rear.__module__) Object.defineProperties(QueueArr.prototype.rear, {
+            __module__ : {value: "__main__"}
+        });
+        QueueArr.prototype.size = async function size() {
+            var self = this;
+            "31";
+            return len(self.items);
+        };
+        if (!QueueArr.prototype.size.__module__) Object.defineProperties(QueueArr.prototype.size, {
+            __module__ : {value: "__main__"}
+        });
+        QueueArr.prototype.__repr__ = async function __repr__() {
+                    return "<"["+"](__name__)["+"](".")["+"](this.constructor.name)["+"](" #")["+"](this.ρσ_object_id)["+"](">");
+        };
+        QueueArr.prototype.__str__ = async function __str__() {
+            return (await this.__repr__());
+        };
+        Object.defineProperty(QueueArr.prototype, "__bases__", {value: []});
+        
+        
+        
+        
+        
+        
+        
+    
+        "33";
+        async function queuearr() {
+            var ρσ_ls, c, inp, scene, ρσ_unpack, f, r, _GS_1, q;
+            "34";
+            c = ρσ_list_decorate([]);
+            "35";
+            inp = ρσ_list_decorate([]);
+            "37";
+            async function qNode(n, x) {
+                var ρσ_ls, b, t, bx, c;
+                "38";
+                b = ρσ_interpolate_kwargs.call(this, box, [ρσ_desugar_kwargs({pos: vector(0, 0, 0), axis: vec(90, 0, 0), length: 8, height: 8, width: 8, color: color.blue})]);
+                "39";
+                t = ρσ_interpolate_kwargs.call(this, text, [ρσ_desugar_kwargs({text: str(n), align: "center", color: color.green, pos: vec(0, 1.3["-u"](), 4), height: 3})]);
+                "40";
+                bx = ρσ_interpolate_kwargs.call(this, extrusion, [ρσ_desugar_kwargs({path: ρσ_list_decorate([ vec(0, 0, 5["-u"]()), vec(0, 0, 5) ]), color: color.orange, shape: ρσ_list_decorate([ ρσ_list_decorate(ρσ_interpolate_kwargs.call(shapes, shapes.rectangle, [ρσ_desugar_kwargs({width: 10, height: 10})])), ρσ_list_decorate(ρσ_interpolate_kwargs.call(shapes, shapes.rectangle, [ρσ_desugar_kwargs({width: 8, height: 8})])) ])})]);
+                "41";
+                c = ρσ_interpolate_kwargs.call(this, compound, [ρσ_list_decorate([ b, t, bx ])].concat([ρσ_desugar_kwargs({origin: vec(0, 0, 0), pos: vec(5["+"](x), 0, 0), axis: vec(90, 0, 0)})]));
+                "42";
+                return c;
+            };
+            if (!qNode.__argnames__) Object.defineProperties(qNode, {
+                __argnames__ : {value: ["n", "x"]},
+                __module__ : {value: "__main__"}
+            });
+    
+            "44";
+            async function ptrMove(p) {
+                var ρσ_ls, j;
+                "45";
+                for (var ρσ_Index0 = 0; ρσ_Index0["<"](10); ρσ_Index0++) {
+                    j = ρσ_Index0;
+                    "46";
+                    (await rate(50));
+                    "47";
+                    p.pos.x=p.pos.x["+"](1);
+                }
+            };
+            if (!ptrMove.__argnames__) Object.defineProperties(ptrMove, {
+                __argnames__ : {value: ["p"]},
+                __module__ : {value: "__main__"}
+            });
+    
+            "49";
+            async function ptr() {
+                var ρσ_ls, a, t, b, c, a1, t1, b1, c1;
+                "50";
+                a = ρσ_interpolate_kwargs.call(this, arrow, [ρσ_desugar_kwargs({pos: vector(5, 15, 0), axis: vector(0, 8["-u"](), 0), color: color.yellow, shaftwidth: 2})]);
+                "51";
+                t = ρσ_interpolate_kwargs.call(this, text, [ρσ_desugar_kwargs({text: "Front", align: "center", color: color.green, pos: vec(5, 16, 0), height: 3})]);
+                "52";
+                b = ρσ_interpolate_kwargs.call(this, box, [ρσ_desugar_kwargs({pos: vector(t.pos.x, t.pos.y["+"](1), t.pos.z), length: t.length["+"](1), height: t.height["+"](1), width: t.depth["+"](1), opacity: .3})]);
+                "53";
+                c = ρσ_interpolate_kwargs.call(this, compound, [ρσ_list_decorate([ a, t, b ])].concat([ρσ_desugar_kwargs({origin: vec(0, 0, 0), pos: vec(0, 0, 0), axis: vec(90, 0, 0)})]));
+                "54";
+                a1 = ρσ_interpolate_kwargs.call(this, arrow, [ρσ_desugar_kwargs({pos: vector(5, 15["-u"](), 0), axis: vector(0, 8, 0), color: color.yellow, shaftwidth: 2})]);
+                "55";
+                t1 = ρσ_interpolate_kwargs.call(this, text, [ρσ_desugar_kwargs({text: "Rear", align: "center", color: color.green, pos: vec(5, 18["-u"](), 0), height: 3})]);
+                "56";
+                b1 = ρσ_interpolate_kwargs.call(this, box, [ρσ_desugar_kwargs({pos: vector(t1.pos.x, t1.pos.y["+"](1), t1.pos.z), length: t1.length["+"](1), height: t1.height["+"](1), width: t1.depth["+"](1), opacity: .3})]);
+                "57";
+                c1 = ρσ_interpolate_kwargs.call(this, compound, [ρσ_list_decorate([ a1, t1, b1 ])].concat([ρσ_desugar_kwargs({origin: vec(0, 0, 0), pos: vec(10["-u"](), 0, 0), axis: vec(90, 0, 0)})]));
+                "58";
+                return [c, c1];
+            };
+            if (!ptr.__module__) Object.defineProperties(ptr, {
+                __module__ : {value: "__main__"}
+            });
+    
+            "60";
+            scene = canvas();
+            "61";
+            scene.range = 30;
+            "62";
+            ρσ_unpack = (await ptr());
+    ρσ_unpack = ρσ_unpack_asarray(2, ρσ_unpack);
+            f = ρσ_unpack[0];
+            r = ρσ_unpack[1];
+            "63";
+            scene.camera.follow(r);
+            "64";
+            _GS_1 = new QueueArr;
+            (await _GS_1.__init__());
+            q = _GS_1;
+            "66";
+            scene.append_to_caption("\t\t\t");
+            "67";
+            async function B(b) {
+                var ρσ_ls, n;
+                "68";
+                scene.camera.follow(r);
+                (await sleep(.1));
+                "69";
+                n = int(input("Enter a number:"));
+                "70";
+                (await q.enqueue(n));
+                "71";
+                print("Element "["+"](n)["+"](" added"));
+                "72";
+                (await ptrMove(r));
+                "73";
+                c.append((await qNode(n, len(inp)["*"](10))));
+                "74";
+                inp.append(n);
+                "75";
+                scene.center = vec(f.pos.x["+"](r.pos.x)["/"](2), 0, 8);
+            };
+            if (!B.__argnames__) Object.defineProperties(B, {
+                __argnames__ : {value: ["b"]},
+                __module__ : {value: "__main__"}
+            });
+    
+            "76";
+            ρσ_interpolate_kwargs.call(this, button, [ρσ_desugar_kwargs({bind: B, text: "Enqueue"})]);
+            "77";
+            scene.append_to_caption(" ");
+            "79";
+            async function A(b) {
+                var ρσ_ls, e, d;
+                "80";
+                scene.camera.follow(f);
+                "81";
+                e = (await q.dequeue());
+                "82";
+                if ((e !== null && (typeof e !== "object" || ρσ_not_equals(e, null)))) {
+                    "83";
+                    print("Element "["+"](e)["+"](" removed"));
+                    "84";
+                    (await ptrMove(f));
+                    "85";
+                    d = c.pypop(0);
+                    "86";
+                    d.visible = false;
+                    "87";
+                    d = undefined;
+                    "88";
+                } else {
+                    "89";
+                    print("No element available");
+                }
+            };
+            if (!A.__argnames__) Object.defineProperties(A, {
+                __argnames__ : {value: ["b"]},
+                __module__ : {value: "__main__"}
+            });
+    
+            "90";
+            ρσ_interpolate_kwargs.call(this, button, [ρσ_desugar_kwargs({bind: A, text: "Dequeue"})]);
+            "91";
+            scene.append_to_caption(" ");
+            "93";
+            async function F(b) {
+                "94";
+                scene.camera.follow(f);
+                "95";
+                print("Front element :", (await q.front()));
+            };
+            if (!F.__argnames__) Object.defineProperties(F, {
+                __argnames__ : {value: ["b"]},
+                __module__ : {value: "__main__"}
+            });
+    
+            "96";
+            ρσ_interpolate_kwargs.call(this, button, [ρσ_desugar_kwargs({bind: F, text: "Front"})]);
+            "97";
+            scene.append_to_caption(" ");
+            "99";
+            async function R(b) {
+                "100";
+                scene.camera.follow(r);
+                "101";
+                print("Rear element :", (await q.rear()));
+            };
+            if (!R.__argnames__) Object.defineProperties(R, {
+                __argnames__ : {value: ["b"]},
+                __module__ : {value: "__main__"}
+            });
+    
+            "102";
+            ρσ_interpolate_kwargs.call(this, button, [ρσ_desugar_kwargs({bind: R, text: "Rear"})]);
+            "103";
+            scene.append_to_caption(" ");
+            "105";
+            async function S(b) {
+                "106";
+                print("Queue size :", (await q.size()));
+            };
+            if (!S.__argnames__) Object.defineProperties(S, {
+                __argnames__ : {value: ["b"]},
+                __module__ : {value: "__main__"}
+            });
+    
+            "107";
+            ρσ_interpolate_kwargs.call(this, button, [ρσ_desugar_kwargs({bind: S, text: "Size"})]);
+            "108";
+            scene.append_to_caption(" ");
+            "110";
+            scene.append_to_caption("\n\n");
+            "111";
+            scene.append_to_caption("Activities:");
+            "112";
+            print();
+            "114";
+        };
+        if (!queuearr.__module__) Object.defineProperties(queuearr, {
+            __module__ : {value: "__main__"}
+        });
+    
+        if ((__name__ === "__main__" || typeof __name__ === "object" && ρσ_equals(__name__, "__main__"))) {
+            "115";
+            (await queuearr());
+        }
+    };
+    if (!__main__.__module__) Object.defineProperties(__main__, {
+        __module__ : {value: "__main__"}
+    });
+    
+    ;$(function(){ window.__context = { glowscript_container: $("#glowscript").removeAttr("id") }; __main__() })})()
+    // END JAVASCRIPT
+    
+    //--><!]]></script>
+<script text=""></script>
+    <a class="btn btn-sm btn-dark mb-1" href="/queue"><span>Back</span></a>
+</div>
+{% endblock %}

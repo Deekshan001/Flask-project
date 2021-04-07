@@ -1,0 +1,22 @@
+html{
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    background: #fff;
+}
+
+.bgcol-light {
+  background-color: #9ede73;
+}
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.container {
+    padding: 10px;
+}
+
+.temp {
+  margin-top: 10px;
+}

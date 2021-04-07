@@ -1,0 +1,16 @@
+.glowscript{
+    margin: auto;
+    width: 640px;
+    padding: 10px;
+  }
+
+textarea{
+    margin-left: 360px;
+    padding: 10px;
+}
+
+
+a{
+    text-decoration: none !important;
+    color: beige !important;
+}

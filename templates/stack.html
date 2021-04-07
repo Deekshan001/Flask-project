@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="/">Stack</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/queue">Queue</a>
+    </li>
+  </ul>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 mt-4">
+    <div class="col">
+      <div class="card shadow-sm">
+        <img class="bd-placeholder-img card-img-top" width="50%" height=300"
+          src="/static/images/stackArr.png">
+
+        <div class="card-body bg-light">
+          <h5 class="card-title">Stack (Array)</h5>
+          <p class="card-text">Functions: push, pop, top and size</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <a class="btn btn-sm btn-outline-info" href="/stackArr">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <img class="bd-placeholder-img card-img-top" width="50%" height=300"
+          src="/static/images/stackLL.png">
+
+        <div class="card-body bg-light">
+          <h5 class="card-title">Stack (Linked list)</h5>
+          <p class="card-text">Functions: Push, Pop, Top and Size</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <a class="btn btn-sm btn-outline-info" href="/stackLL">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
