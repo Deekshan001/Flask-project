@@ -20,3 +20,8 @@ body {
 .temp {
   margin-top: 10px;
 }
+
+.desc{
+  margin-top: 20px;
+  width: 30%;
+}

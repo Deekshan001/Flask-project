@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='css/desc.css') }}"
+    />
+    <title>Queue Data Structure</title>
+  </head>
+
+  <body>
+    <div class="heading1">
+      <h1 class="heading">Queue Data Structure</h1>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <h3>What is Queue?</h3>
+          <p>{{info[0]}}</p>
+          <p>{{info[1]}}</p>
+          <p>{{info[2]}}</p>
+        </div>
+        <div class="col-sm-6">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Data_Queue.svg/1200px-Data_Queue.svg.png"
+            class="image1"
+          />
+        </div>
+      </div>
+      <hr />
+
+      <h3>Features of Queue</h3>
+      <ol>
+        <li>{{info[4][0]}}</li>
+        <li>{{info[4][1]}}</li>
+        <li>{{info[4][2]}}</li>
+        <li>{{info[4][3]}}</li>
+      </ol>
+      <hr />
+      <h3>Applications of Queue</h3>
+      <p>{{info[5]}}</p>
+      <ol>
+        <li>{{info[6][0]}}</li>
+        <li>{{info[6][1]}}</li>
+        <li>{{info[6][2]}}</li>        
+      </ol>
+      <hr />
+      <h3>Time Complexity of Queue operations</h3>
+      <p>{{info[7]}}</p>
+      <ul>
+        <li>{{info[8][0]}}</li>
+        <li>{{info[8][1]}}</li>
+        <li>{{info[8][2]}}</li>
+      </ul>
+    </div>
+  </body>
+</html>

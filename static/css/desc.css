@@ -1,0 +1,25 @@
+.heading{
+    text-align: center;
+    margin-top: 0px !important;
+   
+}
+.heading1{
+    margin-top: 0%;
+    background-color: #9ede73;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.image1{
+    width: 75% !important;
+    height:75% !important;
+}
+.aa{
+    margin-left: 25%;
+}
+body{
+    font-size: 1.7em;
+}
+.container{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding:4% ;
+}
