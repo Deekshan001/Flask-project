@@ -1,0 +1,42 @@
+.input_field {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  max-width: 280px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: solid;
+  border: none none none none;
+}
+.heading1{
+  margin-top: 0%;
+  background-color: #9ede73;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.input_field:focus {
+  outline: none;
+  border-bottom-color: #51c4d3;
+}
+.center {
+  margin: auto;
+  margin-top: 200px;
+  width: 50%;
+  padding: 10px;
+  box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.2) !important;
+}
+
+h3 {
+  margin: auto;
+  margin-top: 800px;
+  width: 50%;
+  padding: 10px;
+  color: #0061a8;
+}
+
+button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
